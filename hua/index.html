@@ -1,0 +1,30 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js"></script>
+<script type="text/javascript" src="/study-english/scripts/utils.js?ver=3"></script>
+<link ref="stylesheet" type="text/css" href="/study-english/css/words.css"></link>
+<style type="text/css" >
+    img[alt=word-image] { width: 420px; }
+    th { display: none; }
+    td { width: 20%}
+</style>
+<script>
+    function onload(){
+        document.title = "Hua: "+getParam("content-name")
+        document.getElementById('return-href').href=getParam("return-path")
+        build_md(document.getElementById('content_div'), getParam("content-name")+".md")
+    }
+</script>
+</head>
+<body onLoad="onload()">
+    <div id="head_div">
+        <a id="return-href" href="./">返回 Home</a>
+    </div>
+    <div id="content_div"></div>
+</body>
+</html>
