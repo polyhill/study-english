@@ -28,15 +28,16 @@
     }
     function load_sentences(div_element, word, sentence_lines){
         for(var i=0; i<sentence_lines.length;) {
-            div_element.append(fromHTML(
-                '<ol start="'+(i/2+1)+'"><li>')+
-                sentence_lines[i++]+
-                '<br>'+
-                sentence_lines[i++]+
-                '</li></ol>'+
-                '<audio controlslist="nodownload" src="./'+word+'/'+(i/2)+'.wav" title="'+word+'"></audio>'+
-                '<p><img src="./'+word+'/'+(i/2)+'.png" alt="word-image"></p>'
-            )
+            div_element.append(
+                fromHTML(
+                    '<ol start="'+(i/2+1)+'"><li>')+
+                    sentence_lines[i++]+
+                    '<br>'+
+                    sentence_lines[i++]+
+                    '</li></ol>'
+                ),
+                fromHTML('<audio controlslist="nodownload" src="./'+word+'/'+(i/2)+'.wav" title="'+word+'"></audio>'),
+                fromHTML('<p><img src="./'+word+'/'+(i/2)+'.png" alt="word-image"></p>')
         };
     }
 </script>
