@@ -6,8 +6,8 @@
 <meta http-equiv="Expires" content="0" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js"></script>
-<script type="text/javascript" src="/study-english/scripts/utils.js?ver=3"></script>
-<link ref="stylesheet" type="text/css" href="/study-english/css/words.css"></link>
+<script type="text/javascript" src="/study-english/scripts/utils.js?ver=4"></script>
+<link ref="stylesheet" type="text/css" href="/study-english/css/words.css?ver=1"></link>
 <script>
     function onload(){
         document.title = "word: "+getParam("word");
@@ -28,15 +28,14 @@
     }
     function load_sentences(div_element, word, sentence_lines){
         for(var i=0; i<sentence_lines.length;) {
-            div_element.append(
-                fromHTML('<ol start="'+(i/2+1)+'"><li>'),
-                // document.createElement('::marker'),
-                fromHTML(sentence_lines[i++]),
-                fromHTML('<br>'),
-                fromHTML(sentence_lines[i++]),
-                fromHTML('</li></ol>'),
-                fromHTML('<audio controlslist="nodownload" src="./'+word+'/'+(i/2)+'.wav" title="'+word+'"></audio>'),
-                fromHTML('<p><img src="./'+word+'/'+(i/2)+'.png" alt="word-image"></p>')
+            div_element.append(fromHTML(
+                '<ol start="'+(i/2+1)+'"><li>')+
+                sentence_lines[i++]+
+                '<br>'+
+                sentence_lines[i++]+
+                '</li></ol>'+
+                '<audio controlslist="nodownload" src="./'+word+'/'+(i/2)+'.wav" title="'+word+'"></audio>'+
+                '<p><img src="./'+word+'/'+(i/2)+'.png" alt="word-image"></p>'
             )
         };
     }
