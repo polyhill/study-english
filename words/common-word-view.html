@@ -10,9 +10,35 @@
 <link ref="stylesheet" type="text/css" href="/study-english/css/words.css"></link>
 <script>
     function onload(){
-        document.title = "word: "+getParam("word")
-        document.getElementById('return-href').href=getParam("return-path")
-        build_md(document.getElementById('word_div'), getParam("word")+"/"+getParam("word")+".md")
+        document.title = "word: "+getParam("word");
+        document.getElementById('return-href').href=getParam("return-path");
+        div_element = document.getElementById('word_div');
+        word = getParam("word");
+        all_lines = readLines(word+"/"+word+".txt");
+        load_word_div(div_element, word, all_lines.slice(0,2))
+        div_element.append('<h4 id="">例句</h4>');
+        load_sentences(div_element, word, all_lines.slice(2))
+    }
+    function load_word_div(div_element, word, word_lines){
+        div_element.append(
+            '<h3 id="word">' + word_lines[0] + '</h3>', 
+            '<p>' + word_lines[1] + '</p>',
+            '<audio controlslist="nodownload" src="./'+word+'/'+word+'.wav" title="'+word+'"></audio>'
+        )
+    }
+    function load_sentences(div_element, word, sentence_lines){
+        for(var i=0; i<sentence_lines.length;) {
+            div_element.append(
+                '<ol start="'+(i/2+1)+'"><li>',
+                '::marker',
+                sentence_lines[i++],
+                '<br>',
+                sentence_lines[i++],
+                '</li></ol>',
+                '<audio controlslist="nodownload" src="./'+word+'/'+(i/2)+'.wav" title="'+word+'"></audio>',
+                '<p><img src="./'+word+'/'+(i/2)+'.png" alt="word-image"></p>'
+            )
+        };
     }
 </script>
 </head>
@@ -20,6 +46,8 @@
     <div id="head_div">
         <a id="return-href" href="./">返回单词表</a>
     </div>
-    <div id="word_div"></div>
+    <div id="word_div">
+
+    </div>
 </body>
 </html>
