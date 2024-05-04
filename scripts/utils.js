@@ -40,10 +40,11 @@ function readLines(textFile){
  * @return {Element | HTMLCollection | null}
  */
 function fromHTML(html, trim = true) {
+    if (!html) return null;
+
     // Process the HTML string.
     html = trim ? html.trim() : html;
-    if (!html) return null;
-  
+    
     // Then set up a new template element.
     const template = document.createElement('template');
     template.innerHTML = html;

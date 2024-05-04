@@ -23,7 +23,7 @@
         div_element.append(
             fromHTML('<h3 id="word">' + word_lines[0] + '</h3>'), 
             fromHTML('<p>' + word_lines[1] + '</p>'),
-            fromHTML('<audio controlslist="nodownload" src="./'+word+'/'+word+'.wav" title="'+word+'"></audio>')
+            fromHTML('<audio controls src="./'+word+'/'+word+'.wav" title="'+word+'" controlslist="nodownload"></audio>')
         )
     }
     function load_sentences(div_element, word, sentence_lines){
