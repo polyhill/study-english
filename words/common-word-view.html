@@ -21,22 +21,22 @@
     }
     function load_word_div(div_element, word, word_lines){
         div_element.append(
-            '<h3 id="word">' + word_lines[0] + '</h3>', 
-            '<p>' + word_lines[1] + '</p>',
-            '<audio controlslist="nodownload" src="./'+word+'/'+word+'.wav" title="'+word+'"></audio>'
+            document.createElement('<h3 id="word">' + word_lines[0] + '</h3>'), 
+            document.createElement('<p>' + word_lines[1] + '</p>'),
+            document.createElement('<audio controlslist="nodownload" src="./'+word+'/'+word+'.wav" title="'+word+'"></audio>')
         )
     }
     function load_sentences(div_element, word, sentence_lines){
         for(var i=0; i<sentence_lines.length;) {
             div_element.append(
-                '<ol start="'+(i/2+1)+'"><li>',
-                '::marker',
-                sentence_lines[i++],
-                '<br>',
-                sentence_lines[i++],
-                '</li></ol>',
-                '<audio controlslist="nodownload" src="./'+word+'/'+(i/2)+'.wav" title="'+word+'"></audio>',
-                '<p><img src="./'+word+'/'+(i/2)+'.png" alt="word-image"></p>'
+                document.createElement('<ol start="'+(i/2+1)+'"><li>'),
+                // document.createElement('::marker'),
+                document.createElement(sentence_lines[i++]),
+                document.createElement('<br>'),
+                document.createElement(sentence_lines[i++]),
+                document.createElement('</li></ol>'),
+                document.createElement('<audio controlslist="nodownload" src="./'+word+'/'+(i/2)+'.wav" title="'+word+'"></audio>'),
+                document.createElement('<p><img src="./'+word+'/'+(i/2)+'.png" alt="word-image"></p>')
             )
         };
     }
