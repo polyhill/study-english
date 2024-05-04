@@ -16,27 +16,27 @@
         word = getParam("word");
         all_lines = readLines(word+"/"+word+".txt");
         load_word_div(div_element, word, all_lines.slice(0,2))
-        div_element.append('<h4 id="">例句</h4>');
+        div_element.append(fromHTML('<h4 id="">例句</h4>'));
         load_sentences(div_element, word, all_lines.slice(2))
     }
     function load_word_div(div_element, word, word_lines){
         div_element.append(
-            document.createElement('<h3 id="word">' + word_lines[0] + '</h3>'), 
-            document.createElement('<p>' + word_lines[1] + '</p>'),
-            document.createElement('<audio controlslist="nodownload" src="./'+word+'/'+word+'.wav" title="'+word+'"></audio>')
+            fromHTML('<h3 id="word">' + word_lines[0] + '</h3>'), 
+            fromHTML('<p>' + word_lines[1] + '</p>'),
+            fromHTML('<audio controlslist="nodownload" src="./'+word+'/'+word+'.wav" title="'+word+'"></audio>')
         )
     }
     function load_sentences(div_element, word, sentence_lines){
         for(var i=0; i<sentence_lines.length;) {
             div_element.append(
-                document.createElement('<ol start="'+(i/2+1)+'"><li>'),
+                fromHTML('<ol start="'+(i/2+1)+'"><li>'),
                 // document.createElement('::marker'),
-                document.createElement(sentence_lines[i++]),
-                document.createElement('<br>'),
-                document.createElement(sentence_lines[i++]),
-                document.createElement('</li></ol>'),
-                document.createElement('<audio controlslist="nodownload" src="./'+word+'/'+(i/2)+'.wav" title="'+word+'"></audio>'),
-                document.createElement('<p><img src="./'+word+'/'+(i/2)+'.png" alt="word-image"></p>')
+                fromHTML(sentence_lines[i++]),
+                fromHTML('<br>'),
+                fromHTML(sentence_lines[i++]),
+                fromHTML('</li></ol>'),
+                fromHTML('<audio controlslist="nodownload" src="./'+word+'/'+(i/2)+'.wav" title="'+word+'"></audio>'),
+                fromHTML('<p><img src="./'+word+'/'+(i/2)+'.png" alt="word-image"></p>')
             )
         };
     }
