@@ -28,7 +28,7 @@
                 words_table = words_table + "\r\n|"
             }
             word_path = element.replace(" ", "-")
-            words_table = words_table + "  [" + element + "](/study-english/words/word-view.html?word="+word_path+"&return-path=/study-english/hua/index.html?part-name="+part_name+")  |"
+            words_table = words_table + "  [" + element + "](/study-english/words/common-word-view.html?word="+word_path+"&return-path=/study-english/hua/part.html?part-name="+part_name+")  |"
         });
         md_file = readText(part_name+".txt")
         return md_file.replace("[part-words]",words_table)
