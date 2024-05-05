@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js"></script>
 <script type="text/javascript" src="/study-english/scripts/utils.js?ver=5"></script>
-<link rel="stylesheet" type="text/css" href="/study-english/css/words.css"></link>
+<link rel="stylesheet" type="text/css" src="/study-english/css/words.css"></link>
 <style type="text/css" >
     img[alt=word-image] { width: 420px; }
     th { display: none; }
@@ -17,18 +17,19 @@
     function onload(){
         document.title = "Hua: "+getParam("part-name")
         document.getElementById('return-href').href=getParam("return-path")
-        convert_md(document.getElementById('content_div'), load_md(getParam("part-name")))
+        markdown = load_md(getParam("part-name"))
+        convert_md(document.getElementById('content_div'), markdown)
     }
 
     function load_md(part_name){
         words_lines = readLines(part_name+"-words.txt")
-        words_table = ""
+        words_table = "|"
         words_lines.forEach((element, i) => {
-            if(i%5==0){
-                words_table = words_table + "\r\n|"
-            }
-            word_path = element.replace(" ", "-")
+            word_path = element.replaceAll(" ", "-")
             words_table = words_table + "  [" + element + "](/study-english/words/common-word-view.html?word="+word_path+"&return-path=/study-english/hua/part.html?part-name="+part_name+")  |"
+            if(i%4==3){
+                words_table = words_table + "\r\n"
+            }
         });
         md_file = readText(part_name+".txt")
         return md_file.replace("[part-words]",words_table)
