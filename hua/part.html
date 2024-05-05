@@ -23,11 +23,11 @@
     function load_md(part_name){
         words_lines = readLines(part_name+"-words.txt")
         words_table = ""
-        words_lines.forEach(word, i => {
+        words_lines.forEach((element, i) => {
             if(i%5==0){
                 words_table = words_table + "\r\n|"
             }
-            words_table = word + "|"
+            words_table = element + "|"
         });
         md_file = readText(part_name+".txt")
         md_file.replace("[part-words]",words_table)
