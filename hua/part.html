@@ -15,13 +15,22 @@
 </style>
 <script>
     function onload(){
-        document.title = "Hua: "+getParam("content-name")
+        document.title = "Hua: "+getParam("part-name")
         document.getElementById('return-href').href=getParam("return-path")
-        build_md(document.getElementById('content_div'), getParam("content-name")+".md")
+        build_md(document.getElementById('content_div'), load_md(getParam("part-name")))
     }
 
-    function load_word_table(){
-
+    function load_md(part_name){
+        words_lines = readLines(part_name+"-words.txt")
+        words_table = ""
+        words_lines.forEach(word, i => {
+            if(i%5==0){
+                words_table = words_table + "\r\n|"
+            }
+            words_table = word + "|"
+        });
+        md_file = readText(part_name+".txt")
+        md_file.replace("[part-words]",words_table)
     }
 </script>
 </head>
@@ -29,8 +38,6 @@
     <div id="head_div">
         <a id="return-href" href="./">返回 Home</a>
     </div>
-    <div id="content_div">
-        <div id="word_table_div"></div>
-    </div>
+    <div id="content_div"></div>
 </body>
 </html>
