@@ -27,7 +27,7 @@
             if(i%5==0){
                 words_table = words_table + "\r\n|"
             }
-            words_table = words_table + element + "|"
+            words_table = words_table + "  " + element + "  |"
         });
         md_file = readText(part_name+".txt")
         return md_file.replace("[part-words]",words_table)
