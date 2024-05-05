@@ -27,7 +27,8 @@
             if(i%5==0){
                 words_table = words_table + "\r\n|"
             }
-            words_table = words_table + "  " + element + "  |"
+            word_path = element.replace(" ", "-")
+            words_table = words_table + "  [" + element + "](/study-english/words/word-view.html?word="+word_path+"&return-path=/study-english/hua/index.html?part-name="+part_name+")  |"
         });
         md_file = readText(part_name+".txt")
         return md_file.replace("[part-words]",words_table)
