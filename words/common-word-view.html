@@ -28,17 +28,19 @@
     }
     function load_sentences(div_element, word, sentence_lines){
         for(var i=0; i<sentence_lines.length;) {
-            div_element.append(
-                fromHTML(
-                    '<ol start="'+(i/2+1)+'"><li>'+
-                    sentence_lines[i++]+
-                    '<br>'+
-                    sentence_lines[i++]+
-                    '</li></ol>'
-                ),
-                fromHTML('<audio controls src="./'+word+'/'+(i/2)+'.wav" title="'+word+'" controlslist="nodownload"></audio>'),
-                fromHTML('<p><img src="./'+word+'/'+(i/2)+'.png" alt="word-image"></p>')
-            )
+            if(sentence_lines[i]!=null && sentence_lines[i]!=""){
+                div_element.append(
+                    fromHTML(
+                        '<ol start="'+(i/2+1)+'"><li>'+
+                        sentence_lines[i++]+
+                        '<br>'+
+                        sentence_lines[i++]+
+                        '</li></ol>'
+                    ),
+                    fromHTML('<audio controls src="./'+word+'/'+(i/2)+'.wav" title="'+word+'" controlslist="nodownload"></audio>'),
+                    fromHTML('<p><img src="./'+word+'/'+(i/2)+'.png" alt="word-image"></p>')
+                )
+            }
         };
     }
 </script>
