@@ -17,7 +17,7 @@
     function onload(){
         document.title = "Hua: "+getParam("part-name")
         document.getElementById('return-href').href=getParam("return-path")
-        build_md(document.getElementById('content_div'), load_md(getParam("part-name")))
+        convert_md(document.getElementById('content_div'), load_md(getParam("part-name")))
     }
 
     function load_md(part_name){

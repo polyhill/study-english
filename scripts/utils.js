@@ -4,6 +4,11 @@ function build_md(element, md_path){
     element.innerHTML = converter.makeHtml(markdown);
 }
 
+function convert_md(element, text){
+    var converter = new showdown.Converter({'simpleLineBreaks': true, 'tables': true});
+    element.innerHTML = converter.makeHtml(text);
+}
+
 function readText(textFile) {
     "use strict";
     var rawFile = new XMLHttpRequest();
