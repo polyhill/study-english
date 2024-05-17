@@ -33,3 +33,6 @@ item
 set down
 highway
 grateful
+power
+recover
+upset
