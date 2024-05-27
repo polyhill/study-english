@@ -16,3 +16,6 @@ spelling
 expression
 usage
 vocabulary
+make use of
+block
+fluently
