@@ -1,0 +1,8 @@
+command [kə'mɑːnd] 
+n. 命令；Run when I give the command. 我下令时就跑。<br>v. 命令：The officer commanded his men to shoot. 军官命令他手下射击。
+The captain's command was to sail north.
+船长的命令是向北航行。
+The software can execute commands very quickly.
+这款软件可以非常快地执行命令。
+The coach commanded the team to practice harder.
+教练命令球队更加努力地训练。

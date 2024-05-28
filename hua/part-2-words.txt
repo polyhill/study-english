@@ -19,3 +19,6 @@ vocabulary
 make use of
 block
 fluently
+command
+come up
+straight
