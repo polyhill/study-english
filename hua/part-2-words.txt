@@ -22,3 +22,6 @@ fluently
 command
 come up
 straight
+apartment
+elevator
+gas
