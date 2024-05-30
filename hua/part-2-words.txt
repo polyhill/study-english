@@ -25,3 +25,6 @@ straight
 apartment
 elevator
 gas
+cab
+request
+flat
