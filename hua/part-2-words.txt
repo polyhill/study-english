@@ -28,3 +28,6 @@ gas
 cab
 request
 flat
+lift
+petrol
+lorry
