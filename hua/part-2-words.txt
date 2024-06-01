@@ -31,3 +31,6 @@ flat
 lift
 petrol
 lorry
+recognize
+identity
+latter
