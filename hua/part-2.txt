@@ -6,6 +6,12 @@
 
 &emsp;&emsp;**Voyages** of people from England **play an important part** in spreading the English language. **At present**, English is **frequently** spoken as an **official** or common language in many countries, **such as** **America**, **Singapore**, **Malaysia** and some **African** countries. All **based on** British English, the English spoken in these countries can be well understood by **native** English speakers. But **actually**, these English have been **gradually** changing in **accents**, **spelling**, **expressions** and the **usage** of **vocabulary**.
 
-<audio controls src="./part-2-audio-1.wav" title="part-1-1" controlsList="nodownload"></audio>
+<audio controls src="./part-2-audio-1.wav" title="part-2-1" controlsList="nodownload"></audio>
+
+&emsp;&emsp;**Because of** this fact, you can **make use of** the differences to tell which country the foreigners of your **block** are from. For example, if a boss **fluently commands** his driver, “**Come up straight** to my **apartment** by **elevator** and take some **gas** for my trucks and **cabs**”, instead of **requesting**, “Please come to my **flat** by **lift** and take some **petrol** for my **lorries** and taxis ” , you can **recognize** his American **identity**, while the **latter suggests** that he is British.
+
+<audio controls src="./part-2-audio-2.wav" title="part-2-2" controlsList="nodownload"></audio>
 
 &emsp;&emsp;英国人的**航海**在英语的传播中**扮演了重要的角色**。**目前**，英语在许多国家被作为**官方**语言或通用语言**频繁地**使用，**例如**美国.**新加波**.**马来西亚**和一些**非洲的**国家。这些国家的英语都**以英式英语为基础**，能很好地为以英语为**本族语**的人所理解。但是**实际上**，这些英语在**口音**、**拼写**、**表达**和**词汇**的**使用**方面都在**逐渐**变化。
+
+&emsp;&emsp;**因为**这一情况的存在，你就可以**利用**这些英语之间的区别说出你们**街区**的外国人是哪个国家来的了。例如，如果有个老板**流利地命令**他的司机：“Come up straight to my apartment by elevator and take some gas for my trucks and cabs(**直接**搭**电梯**到我**公寓**上来拿**卡车**和出租车的**汽油**)”，而不是**要求**说，“ Please come to my flat by lift and take some petrol for my lorries and taxis(请直接搭**电梯**到我**公寓**上来拿**卡车**和出租车的**汽油**)”，你就可以轻易地**辨认**出他的美国人**身份**，而**后者**却**暗示**着那是一位英国人。
